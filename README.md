@@ -7,6 +7,15 @@ Level akses: User, Admin
 Integrasi proot-distro Linux (login langsung ke distro)
 Sistem backup, download, dan manajemen package
 Fitur Utama
+
+# 0.Installation
+``apt install python``
+
+``git clone https://github.com/m29752885-glitch/Bahasa-lo.git cd Bahasa-lo``
+
+``pip install -r requirements.txt``
+
+``python main.py``
 # 1.REPL Interaktif
 Menjalankan perintah Python asli tanpa error.
 Bisa menyimpan session dan variabel.
