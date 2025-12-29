@@ -1,0 +1,17 @@
+{
+  "password_admin": "12345",
+  "prompt_admin": "[ADMIN]>",
+  "allowed_folders": [
+    "downloads",
+    "packages",
+    "plugins",
+    "backup",
+    "admin/cloud"
+  ],
+  "default_repo": [
+    "https://example.com/repo1",
+    "https://example.com/repo2"
+  ],
+  "cloud_folder": "admin/cloud",
+  "plugins_folder": "admin/plugins"
+}
