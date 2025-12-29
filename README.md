@@ -69,3 +69,6 @@ downloads : file luar rootfs
 packages : hasil install plugin / package
 admin : file konfigurasi admin
 backup : simpan file backup
+
+Update?
+# No aku lelah bikin script ini
