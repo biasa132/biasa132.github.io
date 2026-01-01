@@ -1,74 +1,226 @@
-## Bahasa Lo - Ultimate REPL
-Bahasa Lo adalah environment interaktif (REPL) berbasis Python yang dilengkapi dengan:
-Interpreter file .blo
-File Explorer ala Linux (ls, cd, cat)
-Plugin system dengan auto-reload untuk plugin tertentu
-Level akses: User, Admin
-Integrasi proot-distro Linux (login langsung ke distro)
-Sistem backup, download, dan manajemen package
-Fitur Utama
+🚀 Bahasa-lo (.blo)
 
-# 0.Installation
-``apt install python``
+Bahasa-lo adalah bahasa pemrograman berbasis Python dengan kata kunci Bahasa Indonesia, dirancang agar pemula langsung paham logika coding tanpa ribet bahasa Inggris.
 
-``git clone https://github.com/m29752885-glitch/Bahasa-lo.git cd Bahasa-lo``
+> "Belajar logika dulu, syntax belakangan." — Filosofi Bahasa-lo
 
-``pip install -r requirements.txt``
 
-``python main.py``
-# 1.REPL Interaktif
-Menjalankan perintah Python asli tanpa error.
-Bisa menyimpan session dan variabel.
-Interpreter .blo
-Jalankan file .blo dengan command jalankan namafile.blo.
-File Explorer Linux
-ls : menampilkan isi folder saat ini
-cd nama_folder : pindah folder
-keluar_folder : kembali ke folder utama
-cat nama_file : menampilkan isi file
-Plugin System
-Plugin tertentu akan auto-reload saat REPL dijalankan.
-Plugin bisa diaktifkan manual via plugin -m.
-Plugin tertentu bisa diaktifkan manual satu per satu.
-# 2.Level Akses
-User : akses terbatas, hanya folder tertentu (downloads).
-Admin : akses penuh, bisa mengatur file system, plugin, repo, backup.
-Proot-distro Linux
-Command linux menampilkan distro yang tersedia.
-Bisa login ke distro, install jika belum tersedia.
-# 3.Backup & Download
-Folder downloads untuk file luar rootfs
-Folder packages untuk package dan hasil download
-Folder backup untuk menyimpan backup penting
-# 4.Command Dasar
-Python Dasar
-tulis <ekspresi> : mencetak output
-<variabel> = <nilai> : assignment
-jalankan <file.blo> : menjalankan file .blo
-# 5.File Explorer
-ls : list isi folder
-cd <folder> : pindah folder
-keluar_folder : kembali ke folder utama
-cat <file> : baca isi file
-# 6.Plugin
-plugin -m : aktifkan plugin secara manual
-plugin -i : reload plugin auto-reload
-Admin Mode
-Ketik admin, masukkan password 12345
-Bisa mengakses semua folder dan file
-Bisa menambahkan plugin, mengatur package, dan backup
-# 7.Linux / proot-distro
-Ketik linux untuk melihat distro yang tersedia
-Pilih distro untuk login atau install jika belum ada
-# 8.REPL Lain
-Semua perintah shell Linux bisa dijalankan langsung (misal wget, curl, ping)
-Exit session: keluar atau exit
-# Catatan:
-Folder penting:
-downloads : file luar rootfs
-packages : hasil install plugin / package
-admin : file konfigurasi admin
-backup : simpan file backup
 
-Update?
-# No aku lelah bikin script ini
+
+---
+
+✨ Fitur Utama
+
+🇮🇩 Keyword Bahasa Indonesia (tulis, jika, fungsi, dll)
+
+🧠 Interpreter .blo (translate ke Python otomatis)
+
+💬 REPL interaktif khusus Bahasa-lo
+
+🐧 Command Linux terintegrasi (cd, ls, nano, dll)
+
+🐧 Integrasi proot-distro lewat command linux
+
+🔌 Sistem Plugin modular
+
+📁 Manajemen file & folder (buat, hapus, edit)
+
+🛡️ Permission Engine (user / root / admin)
+
+📦 Auto-manage folder downloads & plugins
+
+
+
+---
+
+📂 Struktur Folder
+
+.
+├── main.py                # Entry point sistem
+├── blo_interpreter.py     # Kamus & translator Bahasa-lo
+├── blo_repl.py            # REPL Bahasa-lo
+├── plugin_loader.py       # Loader & manager plugin
+├── downloads/
+│   ├── plugins/           # Semua plugin (.py)
+│   └── packages/          # Hasil download (wget/curl/git)
+├── README.md
+└──internal/
+    ├──int_mod_loader.py
+    └──int_mod/
+        └──permission_engine.py
+
+---
+
+▶️ Cara Menjalankan
+
+Jalankan sistem utama
+
+python main.py
+
+Masuk REPL Bahasa-lo
+
+jalankan repl
+
+Jalankan file .blo
+
+jalankan namafile.blo
+
+
+---
+
+🧠 Contoh Kode Bahasa-lo
+
+fungsi sapa(nama):
+    jika nama == "admin":
+        tulis "Halo Admin"
+    lainnya:
+        tulis "Halo", nama
+
+sapa("user")
+
+
+---
+
+🧩 Kamus Bahasa (v1)
+
+Contoh keyword:
+
+Bahasa-lo	Python
+
+tulis	print
+masukan	input
+jika	if
+lainnya	else
+fungsi	def
+kembalikan	return
+Benar	True
+Salah	False
+
+
+(Lengkap ada di blo_interpreter.py)
+
+
+---
+
+🔌 Sistem Plugin
+
+Auto-load plugin
+
+Plugin berikut auto-load jika ada:
+
+Explorer_fix
+
+Optimasi
+
+crash_handle
+
+
+Command plugin
+
+plugin -l        # list plugin
+plugin -i nama   # aktifkan plugin
+
+Folder plugin:
+
+./downloads/plugins
+
+
+---
+
+🐧 Command Linux
+
+Bahasa-lo mendukung command Linux langsung:
+
+ls, cd, pwd
+
+nano, cat, rm, mkdir, touch
+
+wget, curl, git clone
+
+
+📦 Semua hasil download otomatis masuk ke:
+
+./downloads/packages
+
+
+---
+
+🐧 Masuk proot-distro
+
+linux
+
+Syarat:
+
+Level root atau admin
+
+
+Flow:
+
+1. Tampilkan distro tersedia
+
+
+2. Pilih distro ter-install
+
+
+3. Login ke distro
+
+
+
+
+---
+
+👤 Level Permission
+
+Level	Prompt	Akses
+
+user	(+)>	basic
+root	[#]>	linux + system
+admin	{+}>	full
+
+
+
+---
+
+📘 Plugin Manual
+
+Bahasa-lo mendukung plugin manual interaktif yang menjelaskan semua fitur sistem secara detail.
+
+Aktifkan:
+
+plugin -i manual
+
+
+---
+
+🎯 Tujuan Proyek
+
+Membantu pemula belajar logika pemrograman
+
+Alternatif Python untuk edukasi lokal
+
+Bisa dipakai di Termux / Linux / VPS
+
+
+
+---
+
+📌 Status Proyek
+
+Versi: v1 (stabil)
+
+Target: Open Source
+
+Lisensi: CC-BY / MIT (opsional)
+
+
+
+---
+
+🤝 Kontribusi
+
+Pull request & ide sangat diterima 🙌
+
+
+---
+
+🔥 Bahasa-lo — Ngoding pakai Bahasa Indonesia, otak langsung nyala.
