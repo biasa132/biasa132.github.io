@@ -86,6 +86,10 @@ jalankan namafile.blo
    git push origin nama-branch
 
 4. Buat Pull Request ke main
+   
+5. Password admin
+   password(khusus pengembang)= 12345
+   cara login ketik admin dan masukkan    password 
 
 ---
 
