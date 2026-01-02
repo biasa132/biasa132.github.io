@@ -1,7 +1,7 @@
 # Bahasa-lo
 Bahasa pemrograman Indonesia berbasis Python untuk pemula.
 
-🌐 Website: https://m29752885-glitch.github.io/
+🌐 Website: https://biasa132.github.io/
 
 🚀 Bahasa-lo (.blo)
 
