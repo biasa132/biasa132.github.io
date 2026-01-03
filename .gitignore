@@ -1,0 +1,8 @@
+# Jangan ikut clone / commit
+index.html
+panduan.html
+robots.txt
+sitemap.xml
+style.css
+__pycache__/
+*.pyc
